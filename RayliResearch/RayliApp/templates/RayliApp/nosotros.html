@@ -1,0 +1,43 @@
+{% extends "RayliApp/inicio.html" %}
+{%load static%}
+
+{% block title %}
+    Nosotros
+{% endblock title %}
+
+{% block body %}
+<body>
+    <div id="nosotros">
+      <div class="row">
+        <div class="parallax-container mod-para">
+            <div class="parallax"><img src="{%static 'RayliApp/images/nosotros.jpg'%}"></div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col s12 cyan darken-3">
+            <ul id="tabs-swipe-demo" class="tabs cyan darken-3">
+              <li class="tab col s4"><a class="active white-text" href="#test-swipe-1">Nosotros</a></li>
+              <li class="tab col s4"><a class="white-text" href="#test-swipe-2">Misión</a></li>
+              <li class="tab col s4"><a class="white-text" href="#test-swipe-3">Visión</a></li>
+            </ul>
+          </div>
+          <div id="test-swipe-1" class="col s12 white black-text">
+            <h2>Nosotros</h2>
+            <div class="separador"></div>
+            <p class="p-80">Somos una empresa moderna fundada por un grupo de profesionales arequipeños, comprometidos con el desarrollo del país, de manera sostenible con el medio ambiente, la sociedad y la economía.</p>
+          </div>
+          <div id="test-swipe-2" class="col s12 white black-text">
+            <h2>Misión</h2>
+            <div class="separador"></div>
+            <p class="p-80">Ser una empresa líder en gestión, para la ejecución de proyectos públicos y privados, asesorías contables, y capacitación profesional en el ámbito académico.</p>
+          </div>
+          <div id="test-swipe-3" class="col s12 white black-text">
+            <h2>Visión</h2>
+            <div class="separador"></div>
+            <p class="p-80">Nuestra visión a futuro es extender nuestros servicios a nivel latinoamericano, cumpliendo con estándares y exigencias globales, mostrando siempre productos de calidad y en forma sostenible mejorando el ambiente en el que vivimos.</p>
+          </div>
+      </div>
+    </div>
+
+</body>
+{% endblock body %}

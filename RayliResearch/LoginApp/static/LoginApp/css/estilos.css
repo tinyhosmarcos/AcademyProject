@@ -1,0 +1,61 @@
+/* CSS Document */
+body.login{
+	background-color: #EBEBED;
+}
+.parallax-container.login {
+	height: 600px;
+	z-index: 0;
+  }
+#div-form{
+	margin-top: 3%;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.prefix{
+	color: #02A2AB;
+}
+
+.logo_star{
+	max-width:45%;
+	background-color:#02979E ;
+	border-radius: 50%;
+}
+label{
+	font-weight: 900;
+}
+#font_login {
+	font-size: calc(1rem + 0.1vw);
+}
+#menucuenta{
+	border-right:1px solid rgba(0,0,0,0.14)
+}
+
+.tabs .tab a{
+	color:#000;
+} /*Black color to the text*/
+.tabs .tab.disabled a{
+ color: rgba(0,0,0,0.4);
+
+}
+
+#menutab{
+	margin-top: 20px;
+}
+
+.tabs .tab a:hover {
+	background-color:#02969e00;
+	color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+	background-color:#02969e00;
+	color:#000;
+} /*Background and text color when a tab is active*/
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+	background-color:#02969e00;
+
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+	background-color:rgb(2, 151, 158)
+} /*Color of underline*/

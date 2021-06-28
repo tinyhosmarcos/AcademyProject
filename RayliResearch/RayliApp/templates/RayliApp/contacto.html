@@ -1,0 +1,67 @@
+{% extends "RayliApp/inicio.html" %}
+{%load static%}
+{% block title %}
+    Contacto
+{% endblock title %}
+
+{% block body %}
+<body>
+    <div class="parallax-container mod-parala">
+        <div class="parallax"><img src="{%static 'RayliApp/images/fondo-contacto1.jpg'%}"></div>
+        <h1 class="white-text titconta">Contáctanos</h1>
+    </div>
+    <div class="row">
+    <div id="contactanos" class="col l10 offset-l1">
+        <div class="row">
+            <div class="col l8">
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input id="first_name" type="text" class="validate" required>
+                          <label for="first_name">Nombres</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate" required>
+                          <label for="last_name">Apellidos</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate" required>
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                            <input id="empresa" type="text" class="validate">
+                            <label for="empresa">Empresa</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" required></textarea>
+                            <label for="textarea1">Mensaje</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <button class="btn-large waves-effect cyan darken-2 right" type="submit" name="action">Enviar
+                            <i class="material-icons right">send</i>
+                          </button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
+            <div class="col l4">
+              <div class="row">
+                <div class="col l10 offset-l1 z-depth-3">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.1566407657392!2d-71.57322746419244!3d-16.41257951744039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9142357dfc4e1dcd%3A0xdd67ae5adf03fbc7!2sCalle%20Miguel%20Grau%2C%20Sachaca%2004013!5e0!3m2!1ses!2spe!4v1617554878145!5m2!1ses!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+            
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+{% endblock body %}

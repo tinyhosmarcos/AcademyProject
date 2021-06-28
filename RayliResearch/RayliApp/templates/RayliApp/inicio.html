@@ -1,0 +1,322 @@
+{%load static%}
+<html>
+<head>
+    
+    <title>{% block title %} Rayli App {% endblock title %}</title>
+    
+    <!--Links a CSS de la pagina RayliApp-->
+    <link rel="stylesheet" type="text/css" href="{% static 'RayliApp/css/materialize.min.css'%}" media="screen,projection">
+    <link rel="stylesheet" type="text/css" href="{% static 'RayliApp/css/estilos.css'%}">
+    {% block estilo_css %}
+      
+    {% endblock estilo_css %}
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+
+    <script type="text/javascript" src="{% static 'RayliApp/js/jquery-3.5.1.js'%}"></script>
+    <script type="text/javascript" src="{% static 'RayliApp/js/materialize.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'RayliApp/js/scripts.js'%}"></script>
+    {% block script %}
+      
+    {% endblock script %}
+    
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+{% block nav %}
+<div class="navbar-fixed">
+<nav class="nav-wrapper row">
+    <div class="col  s8 m8 l1 xl3" >
+      <a href="#!" class="brand-logo" id="div_logo">
+        <img id="logo_img" src="{% static 'RayliApp/images/logos/RayliResearch_Logohor.png' %}"></a>
+    </div>
+    <div class="col s4 m4 l8 xl7"> 
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="menu nav-wrapper hide-on-med-and-down">
+          <li><a href="{%url 'RayliApp:inicio'%}">Inicio</a></li>
+          <li><a href="{%url 'RayliApp:nosotros'%}">Nosotros</a></li>
+          <li><a href="{%url 'RayliApp:tienda'%}">Tienda</a></li>
+          <li><a href="{%url 'RayliApp:servicios'%}">Servicios</a></li>
+          <li><a href="{%url 'RayliApp:capacitacion'%}">Capacitación</a></li>
+          <li><a href="{%url 'RayliApp:aprende'%}">Aprende +</a></li>
+          <li><a href="{%url 'RayliApp:contacto'%}">Contacto</a></li>
+      </ul>
+    </div> 
+    <div class="col l3 xl2 nav-wrapper hide-on-med-and-down" >
+      <ul class="menu "> 
+        <!-- Dropdown Trigger -->
+        <li id="dropdown-size">
+{% if user.username %}
+          <a class="dropdown-trigger" data-target="dropdown_account" >
+            {{user.username}}
+            <i class="material-icons left">account_circle</i>
+          </a>
+        </li>
+      </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown_account" class="dropdown-content">
+          <li><a href="{% url 'LoginApp:datos' %}">Mis Datos</a></li>
+          <li><a href="{% url 'LoginApp:register' %}">Aula Virtual</a></li>
+          <div class="divider"></div>
+          <li><a href="{% url 'logout' %}">Cerrar Sesion</a> </li>
+        </ul>
+{% else %}
+          <a class="dropdown-trigger" data-target="dropdown_account" >
+            Mi Cuenta
+            <i class="material-icons left">account_circle</i>
+          </a>
+          </li>
+          </ul>
+          <!-- Dropdown Structure -->
+          <ul id="dropdown_account" class="dropdown-content">
+          <li><a href="{% url 'LoginApp:login' %}">Identificate</a></li>
+          <li><a href="{% url 'LoginApp:register' %}">Registrate</a></li>
+          </ul>
+
+{% endif %}        
+    </div>
+</nav>
+</div>
+
+
+<ul class="sidenav" id="nav-mobile">
+  <li>
+    <div class="user-view">
+      <div class="background"><img src="{% static 'RayliApp/images/office.jpg' %}"></div>
+      <a href="#user"><i class="material-icons circle medium">account_circle</i></a>
+{% if user.username %}
+      <a href="#name"><span class="name" id="nav_info">{{user.username}}</span></a>
+      <a href="#email"><span class="email" id="nav_info">{{user.email}}</span></a>
+    </div>
+  </li>
+  <li><a href="{% url 'LoginApp:datos' %}">Mis Datos</a></li>
+  <li><a href="{% url 'logout' %}">Cerrar Sesion</a> </li>
+{% else %}
+      <a href="#name"><span class="name" id="nav_info">Mi Cuenta</span></a>
+      <a href="#email"><span class="email" id="nav_info"> </span></a>
+    </div>  
+  </li>
+  <li><a href="{% url 'LoginApp:login' %}">Identificate</a></li>
+  <li><a href="{% url 'LoginApp:register' %}">Registrate</a></li>
+{% endif %}  
+  <div class="divider"></div>
+  <li><a href="{%url 'RayliApp:inicio'%}">Inicio</a></li>
+  <li><a href="{%url 'RayliApp:nosotros'%}">Nosotros</a></li>
+  <li><a href="{%url 'RayliApp:tienda'%}">Tienda</a></li>
+  <li><a href="{%url 'RayliApp:servicios'%}">Servicios</a></li>
+  <li><a href="{%url 'RayliApp:capacitacion'%}">Capacitación</a></li>
+  <li><a href="{%url 'RayliApp:aprende'%}">Aprende +</a></li>
+  <li><a href="{%url 'RayliApp:contacto'%}">Contacto</a></li>
+</ul>
+
+{% endblock nav %}
+
+
+{% block body %}
+
+<body>
+  
+    <div class="row "> 
+    <div class="col s12 m12 ">
+    <div class="carousel carousel-slider center" style="height:400px !important;">
+      <div class="carousel-fixed-item center">
+        <a class="waves-effect cyan darken-2 btn-large darken-text-2">Contáctanos</a>
+      </div>
+      <div class="carousel-item  " href="#one!" >        
+          <img class="img-carrousel" src="{% static 'RayliApp/images/panel_inicial.png' %}"></img >     
+         
+            <h1 class="">Bienvenido a Rayli Research</h1>
+            <p class="">Somos una empresa comprometida con el desarrollo tecnológico </p>
+          
+      </div>
+      <div class="carousel-item " href="#two!" >
+          <img class="img-carrousel" src="{% static 'RayliApp/images/panel_capacitacion.png' %}"></img >     
+          
+            <h1 class="">Asesorías en vivo 24/7</h1>
+            <p class="">Te asesoramos con nuestros especialistas en Ingeniería y Contabilidad </p>
+        
+      </div>
+      <div class="carousel-item  " href="#three!">
+         <img class="img-carrousel" src="{% static 'RayliApp/images/panel_contabilidad.png' %}"></img >    
+                 
+            <h1 class="">Desarrollo Intelectual y Profesional </h1>
+            <p class="">Capacítate con Nosotros en Modo Virtual en Vivo o Modalidad MOOC</p>
+        
+      </div>
+      <div class="carousel-item  " href="#four!" >
+        <img class="img-carrousel" src="{% static 'RayliApp/images/panel_campos.png' %}"></img >    
+          
+            <h1 class="">Compra en nuestra tienda virtual</h1>
+            <p class="">Hacemos envíos a Departamentos y Provincias, y al extranjero</p>
+          
+      </div>
+      <div class="carousel-item  " href="#five!" >
+        <img class="img-carrousel" src="{% static 'RayliApp/images/panel_proyectos.png' %}"></img >    
+              
+          <h1 class="">¡Apoyamos ideas de investigación!, </h1>
+          <p class="">Con un equipo académico de primer nivel, para alcanzar logros en importantes eventos académicos como</p>
+          <p> Conferencias internacionales a través de la presentación de artículos científicos profesionales. </p>
+    </div>
+    </div>
+    </div></div>
+    <div class="section valign-wrapper" id="section-dark">
+      <div class="row valign">
+        <div class="col s12 m10 offset-m1">
+          <div class="row">
+            <div class="col s12"><h2 class="section-title">Features</h2>
+              <div class="separador"></div>
+            
+          </div>
+
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">settings</i></h4>
+              <p class="caption">Nuestros Servicios...</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">sentiment_satisfied</i></h4>
+              <p class="caption">Especialistas en ...</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">sort_by_alpha</i></h4>
+              <p class="caption">Desarrollamos cursos ...</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">swap_vertical_circle</i></h4>
+              <p class="caption">Nuestros productos son...</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">tap_and_play</i></h4>
+              <p class="caption">Aprende desde cualquier dispositivo</p>
+            </div>
+            <div class="col s12 m6 l4">
+              <h4 class="center-align"><i class="medium material-icons" id="icons-features">track_changes</i></h4>
+              <p class="caption">...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  <!-- Paralax -->
+  
+ 
+
+
+  <div id="servicios">
+      <h2>Servicios</h2>
+      <div class="separador"></div>
+      <div class="row" id="tarjetas">
+          <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="{%static 'RayliApp/images/cursos.jpg'%}">
+                  <span class="card-title">PROYECTOS DE INVESTIGACIÓN Y CURSOS PROFESIONALES</span>
+                </div>
+              </div>
+          </div>
+          <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="{%static 'RayliApp/images//GEOGRAFICA.jpg'%}">
+                  <span class="card-title">SERVICIOS PROFESIONALES DE SISTEMAS DE INFORMACIÓN GEOGRÁFICA</span>
+                </div>
+              </div>
+          </div>            
+          <div class="col s12 m6 l4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="{%static 'RayliApp/images/obras.jpg'%}">
+                  <span class="card-title">OBRAS CIVILES, PROYECTOS CIVILES Y AMBIENTALES</span>
+                </div>
+              </div>
+          </div>
+          <div class="col s12 m6 l4 offset-l2">
+            <div class="card">
+              <div class="card-image">
+                <img src="{%static 'RayliApp/images/cursos.jpg'%}">
+                <span class="card-title">ASESORÍA CONTABLE Y FINANCIERA</span>
+              </div>
+            </div>
+        </div>
+        <div class="col s12 m6 offset-m3 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{%static 'RayliApp/images/cursos.jpg'%}">
+              <span class="card-title">TIENDA</span>
+            </div>
+          </div>
+      </div>
+      
+      </div>
+  </div>
+
+
+  </body>  
+{% endblock body %}
+
+{% block footer %}
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l3 s12">
+        <h5>Contáctanos</h5>
+        <div class="row">
+          <div class="col l2 m1 offset-m1 s1 offset-s1">
+            <i class="material-icons valign-wrapper">add_location</i>
+          </div>
+          <div class="col s10">
+            <h6 class="valign-wrapper">Calle Miguel Grau 102, Sachaca-Arequipa</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l2 m1 offset-m1 s1 offset-s1">
+            <i class="material-icons valign-wrapper">add_location</i>
+          </div>
+          <div class="col s10">
+            <h6 class="valign-wrapper">Sucursal: Urba. San Apolinar Mz E, Lote 8, tercera etapa, La Rinconada-Juliaca</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l2 m1 offset-m1 s1 offset-s1">
+            <i class="material-icons valign-wrapper">call</i>
+          </div>
+          <div class="col s10">
+            <h6 class="valign-wrapper">+51 926025911</h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l2 m1 offset-m1 s1 offset-s1">
+            <i class="material-icons valign-wrapper">email</i>
+          </div>
+          <div class="col s10">
+            <h6 class="valign-wrapper">raylicorp@gmail.com</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col l3 s12">
+        <h5>Redes Sociales</h5>
+        <div class="row">
+          <div class="col l4 m3 s4 offset-l1 offset-m2 offset-s2"><a href="https://www.facebook.com/" class="prop-btn btn-face"></a></div>
+          <div class="col l4 m3 s4 offset-m2"><a href="https://www.instagram.com/" class="prop-btn btn-ins"></a></div>
+        </div>
+        <div class="row">
+          <div class="col l4 m3 s4 offset-l1 offset-m2 offset-s2"><a href="https://www.twitter.com/" class="prop-btn btn-twi"></a></div>
+          <div class="col l4 m3 s4 offset-m2"><a href="https://www.linkdln.com/" class="prop-btn btn-link"></a></div>
+        </div>
+      </div>
+      <div class="col l6 s12">
+        <h5>Nosotros</h5>
+        <p class="text-lighten-1 flow-text left-align">Somos una empresa comprometida con el medio ambiente, proyectos civiles y en la supervisión de los mismos, elaborando planes estratégicos para cada uno de ellos y comprometidos con la capacitación profesional a nivel nacional.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container" id="copyrigth-footer">
+      Copyright © 2021 Raily Research - Todos los derechos reservados.
+    </div>
+  </div>
+</footer>  
+{% endblock footer %}
+
+</html>

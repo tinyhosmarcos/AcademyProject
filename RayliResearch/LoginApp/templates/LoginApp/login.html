@@ -1,0 +1,68 @@
+{% extends "RayliApp/inicio.html" %}
+{% load static %}
+{% block title %}
+  Inicio de Sesion
+{% endblock title %}
+{% block estilo_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'LoginApp/css/estilos.css' %}">
+{% endblock estilo_css %}
+{% block script %}
+{% if form.non_field_errors %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+        M.toast({html: '{{form.non_field_errors}}'})
+        
+    });
+</script>
+{%endif%}
+{% endblock script %}
+
+<html>
+    {% block body %}
+    <body class="login">
+        <div class="parallax-container login">
+            <div class="parallax"><img src="{% static 'LoginApp/images/blurred-office.jpg' %}"></div>
+        <div class="container row" id="div-form">
+            <div class="col s0 l6">    
+            </div>
+            <div class="col s12 l6">
+                <div class=" section row center-align">
+                    <img class="logo_star" src="{% static 'RayliApp/images/logos/RayliResearch_Logohor.png' %}">
+                </div>
+                <div class=" container" >
+                   <form method="POST">
+                       {% csrf_token %}
+                       <div class="row ">
+                        <div class="input-field col s12 input_login">
+                          <i class="material-icons prefix">account_circle</i>
+                          {{form.username}}
+                          <label for="{{form.username.auto_id}}">Usuario</label>
+                        </div>
+                        <div class="input-field col s12 input_login">
+                          <i class="material-icons prefix">vpn_key</i>
+                          {{form.password}}
+                          <label for="{{form.password.auto_id}}">Contraseña</label>
+                        </div>
+                        <div class="input-field col s12 center-align">
+                            <button class="btn waves-effect waves-light" type="submit" name="iniciar_sesion">Iniciar Sesion</button>
+                        </div>
+                       </div>
+                       
+                       <b class="black-text" id="font_login">¿Eres nuevo?.Registrate <a href="{%url 'LoginApp:register'%}">aqui.</a></b>
+                    </form>
+                </div>
+
+            </div>
+        </div>    
+        </div>
+
+
+
+
+        
+
+    </body>
+    {% endblock body %}
+   
+</html>

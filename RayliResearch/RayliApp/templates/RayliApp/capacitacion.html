@@ -1,0 +1,35 @@
+{% extends "RayliApp/inicio.html" %}
+{%load static%}
+{% block title %}
+    Capacitación
+{% endblock title %}
+
+{% block body %}
+<body>
+    <div class="ancho80">
+        <h2>Nuestros Cursos</h2>
+        <div class="separador"></div>
+        <div class="tarjetas">
+          <a class="tarjeta" href="capacitacion/1">
+              <div class="tarj-img" style="background-image: url({%static 'RayliApp/images/cursos/desarrollo.png'%})"></div>
+              <div class="tarj-tit">Programación y diseño web</div>
+              <div class="tarj-aut">Por Carl Sagan</div>
+              <div class="tarj-pre">$20</div>
+          </a>
+          <a class="tarjeta" href="#">
+              <div class="tarj-img" style="background-image: url({%static 'RayliApp/images/GEOGRAFICA.jpg'%})"></div>
+              <div class="tarj-tit">Sistemas de información geográfica</div>
+              <div class="tarj-aut">Por Carl Sagan</div>
+              <div class="tarj-pre">$20</div>
+          </a>
+          <a class="tarjeta" href="#">
+              <div class="tarj-img" style="background-image: url({%static 'RayliApp/images/cursos/aguas.jpg'%})"></div>
+              <div class="tarj-tit">Tratamiento de aguas residuales</div>
+              <div class="tarj-aut">Por Carl Sagan</div>
+              <div class="tarj-pre">$20</div>
+          </a>
+      </div>
+    </div>
+
+</body>
+{% endblock body %}

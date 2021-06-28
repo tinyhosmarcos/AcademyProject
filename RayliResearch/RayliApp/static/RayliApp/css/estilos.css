@@ -1,0 +1,694 @@
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+html{
+	font-family: "Roboto", sans-serif;
+}
+body {
+	background: rgb(255, 255, 255);
+	font-size:22px;
+	line-height: 32px;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word !important;
+
+	}
+nav{
+	background-color: #02979E;
+}
+
+.sidenav li>a{
+    font-size: medium;
+    font-weight: 900;
+    color:#0a0a0ade;
+}
+#nav_info{
+    font-size: medium;
+    font-weight: 900;
+    color:#FFF;
+
+}
+
+#dropdown-size{
+    width: 80%;
+}
+
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+h2 {
+    text-align: center;
+    color:#02979E;
+	font-weight: 600;
+	/*font-family: 'Bree Serif', 'serif';*/
+}
+h3 {
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #02979E;
+}
+
+h3 a {
+	color: #02979E;
+}
+
+a {
+	color: #02979E;
+}
+
+.parallax-container h1 {
+	margin-top: 200px;
+	text-align:center;
+	font-size:60px;
+	line-height: 70px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+#div_logo{
+    height: 64px;
+}
+#logo_img{
+    max-height: 97%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+}
+
+.parallax-container{
+    z-index: -5;
+    height: 500px;
+}
+
+.parallax img { width: 100%; }
+
+/* Carrusel */
+.carousel-prin{
+    margin: 0 !important;
+    padding: 0 0 !important;
+}
+.carousel-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Estilos Separador */
+.separador{
+    border-top: 2px solid #02979E;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Estilos Tarjetas */
+#tarjetas{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.card-image img{
+    filter:brightness(0.5);
+}
+.card-image img:hover{
+    filter:brightness(0.7);
+}
+.card-title{
+}
+.caption{
+	color: black;
+}
+#icons-features{
+	color: #02979E;
+}
+/* Servicios */
+#servicios{
+    padding-bottom: 50px;
+}
+ /* Footer */
+h5{
+	margin-bottom: 20px;
+}
+h6{
+	margin: 3px;
+}
+.prop-btn{
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.prop-btn:after{
+	content: '';
+	display: block;
+	padding-bottom: 100%;
+}
+.btn-face{
+	background-image:url(../images/iconos/faceinv.png);
+}
+.btn-ins{
+	background-image:url(../images/iconos/instinv.png);
+}
+.btn-link{
+	background-image:url(../images/iconos/linkinv.png);
+}
+.btn-twi{
+	background-image:url(../images/iconos/twitiinv.png);
+}
+.texto-footer{
+	text-align: left;
+}
+ .page-footer{
+	background-color: black;	
+	color: #02979E;
+}
+#copyrigth-footer{
+	font-size:1.2vw;
+}
+
+/* Nosotros */
+.colorbg{ 
+	background-color: #02979E;
+	color:white;
+	font-family: 'Bree Serif', 'serif';
+}
+.mod-para{
+    z-index: -5;
+    height: 350px;
+	margin-bottom: -50px;
+}
+.p-80{
+	width: 80%;
+	margin: 60px auto;
+}
+
+/* Capacitacion */
+.ancho80{
+	width: 85%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+.brillo{
+	filter:brightness(1);
+}
+
+
+/* Tarjetas propias */
+.tarjetas{
+    width: 85%;
+    margin: 50px auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+    align-items: stretch;
+}
+.tarjeta:link, .tarjeta:visited, .tarjeta:active {
+    text-decoration:none;
+}
+.tarjeta{
+    display: block;
+    width: 20%;
+    margin: 10px 20px;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+.tarj-img{
+    width: 100%;
+    height: 15vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tarj-tit{
+    width: 90%;
+    margin: 5px auto;
+    font-weight: 800;
+    color: #446C82;
+    font-size: calc(0.05em + 1vw);
+}
+.tarj-aut{
+    width: 85%;
+    margin: 5px auto;
+    font-weight: 400;
+    color: black;
+    font-size: calc(0.005em + 0.8vw);
+}
+.tarj-pre{
+    width: 85%;
+    margin: 5px auto;
+    font-weight: 800;
+    color: black;
+    font-size: calc(0.05em + 0.8vw);
+}
+.tarjeta:hover, tarjeta:focus{
+    -webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.45);
+    opacity: 1;
+    cursor:  pointer;
+}
+/* PagCurso */
+#cursowrap{
+    width: 75%;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+#compracurso{
+    float: right;
+    width: 30%;
+}
+#imagencurso{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#imagencurso:after{
+    content: '';
+    display: block;
+    padding-bottom: 60%;
+}
+#preciocurso{
+    width: 80%;
+    margin: 20px auto;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: calc(0.7em + 1vw);
+    letter-spacing: 2px;
+}
+.btn-compra{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#resumencurso{
+    width: 80%;
+    margin: 15px auto;
+    color: black;
+    font-size: calc(0.4em + 0.4vw);
+}
+.tituloresumen{
+    font-weight: 600;
+    font-size: calc(0.5em + 0.5vw) !important;
+}
+#infocurso{
+    float: right;
+    width: 70%;
+}
+#tituloinfo{
+    width: 90%;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    font-size: calc(1em + 1.2vw) !important;
+    color: #02979E;
+    font-weight: 700;
+}
+.subinfo{
+    font-size: calc(0.4em + 0.5vw) !important;
+    color:black;
+    width: 80%;
+    line-height: 25px;
+}
+#aprenderas{
+    width: 80%;
+    margin-top: 30px;
+}
+.subtitulos{
+    font-size: calc(0.5em + 0.8vw) !important;
+    font-weight: 500;
+    color: black;
+    width: 95%;
+    margin-left: 5%;
+    padding-bottom: 10px;
+}
+.contenido{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.textoinfo{
+    width: 90%;
+    margin-left: 10%;
+    color: black;
+    font-size: calc(0.4em + 0.5vw) !important;
+}
+.btn-descarga{
+    margin-left: 10%;
+    margin-top: 15px;
+}
+
+/* Modal Curso */
+.textomodal{
+    padding-bottom: 20px;
+}
+.separadormodal{
+    width: 90%;
+    margin: 30px auto;
+}
+.envio-pago{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* Contáctanos */
+#contactanos{
+    margin-top: 50px;
+}
+.titconta{
+    font-size: calc(2em + 2vw) !important;
+}
+iframe {
+    width: 100%;
+    height: 400px;
+}
+/* MediaQuerys */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Tarjetas */
+    .tarjeta{
+        width: 90%;
+    }
+    .tarj-tit{
+        font-size: calc(0.8em + 1vw);
+    }
+    .tarj-aut{
+        font-size: calc(0.5em + 0.8vw);
+    }
+    .tarj-pre{
+        font-size: calc(0.8em + 0.8vw);
+    }
+	.tarj-img{
+		height: 20vh;
+	}
+    /* Pag cursos */
+    #cursowrap{
+        width: 100%;
+        margin:0 auto;
+    }
+    #compracurso{
+        width: 80%;
+        margin-right: 10%;
+    }
+    #infocurso{
+        width: 90%;
+        margin-right: 5%;
+    }
+    #resumencurso{
+        width: 100%;
+    }
+    .tituloresumen{
+        font-weight: 600;
+        font-size: calc(0.8em + 0.5vw) !important;
+    }
+    #imagencurso{
+        width: 100%;
+    }
+    #aprenderas{
+        width: 90%;
+        margin-top: 30px;
+    }
+    #preciocurso{
+        width: 90%;
+    }
+    .btn-compra{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contenido{
+        width: 100%;
+    }
+    .subinfo{
+        width: 100%;
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+    .textoinfo{
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* Tarjetas */
+    .tarjeta{
+        width: 80%;
+    }
+    .tarj-tit{
+        font-size: calc(0.7em + 1vw);
+    }
+    .tarj-aut{
+        font-size: calc(0.6em + 0.8vw);
+    }
+    .tarj-pre{
+        font-size: calc(0.7em + 0.8vw);
+    }
+	.tarj-img{
+		height: 20vh;
+	}
+    /* Pag cursos */
+    #cursowrap{
+        width: 100%;
+        margin:0 auto;
+    }
+    #compracurso{
+        width: 80%;
+        margin-right: 10%;
+    }
+    #infocurso{
+        width: 90%;
+        margin-right: 5%;
+    }
+    #resumencurso{
+        width: 100%;
+    }
+    .tituloresumen{
+        font-weight: 600;
+        font-size: calc(0.8em + 0.5vw) !important;
+    }
+    #imagencurso{
+        width: 100%;
+    }
+    #aprenderas{
+        width: 90%;
+        margin-top: 30px;
+    }
+    #preciocurso{
+        width: 90%;
+    }
+    .btn-compra{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contenido{
+        width: 100%;
+    }
+    .subinfo{
+        width: 100%;
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+    .textoinfo{
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* Tarjetas */
+    .tarjeta{
+        width: 40%;
+    }
+    .tarj-tit{
+        font-size: calc(0.6em + 0.8vw);
+    }
+    .tarj-aut{
+        font-size: calc(0.5em + 0.8vw);
+    }
+    .tarj-pre{
+        font-size: calc(0.6em + 0.7vw);
+    }
+	.tarj-img{
+		height: 17vh;
+	}
+    /* Pag cursos */
+    #cursowrap{
+        width: 90%;
+        margin:0 auto;
+    }
+    #compracurso{
+        width: 80%;
+        margin-right: 10%;
+    }
+    #infocurso{
+        width: 90%;
+        margin-right: 5%;
+    }
+    #resumencurso{
+        width: 100%;
+    }
+    .tituloresumen{
+        font-weight: 600;
+        font-size: calc(0.8em + 0.5vw) !important;
+    }
+    #imagencurso{
+        width: 100%;
+    }
+    #aprenderas{
+        width: 90%;
+        margin-top: 30px;
+    }
+    #preciocurso{
+        width: 90%;
+    }
+    .btn-compra{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contenido{
+        width: 100%;
+    }
+    .subinfo{
+        width: 100%;
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+    .textoinfo{
+        font-size: calc(0.6em + 0.5vw) !important;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* Tarjetas */
+    .tarjeta{
+        width: 28%;
+    }
+    .tarj-tit{
+        font-size: calc(0.5em + 0.8vw);
+    }
+    .tarj-aut{
+        font-size: calc(0.4em + 0.8vw);
+    }
+    .tarj-pre{
+        font-size: calc(0.5em + 0.6vw);
+    }
+	.tarj-img{
+		height: 20vh;
+	}
+    /* Pag cursos */
+    #cursowrap{
+        width: 85%;
+    }
+    #compracurso{
+        width: 30%;
+        margin-right: 0;
+    }
+    #infocurso{
+        width: 70%;
+        margin-right: 0;
+    }
+    #aprenderas{
+        width: 80%;
+        margin-top: 30px;
+    }
+    #resumencurso{
+        width: 100%;
+    }
+    .tituloresumen{
+        font-weight: 600;
+        font-size: calc(0.8em + 0.5vw) !important;
+    }
+    #imagencurso{
+        width: 100%;
+    }
+    #preciocurso{
+        width: 90%;
+    }
+    .btn-compra{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contenido{
+        width: 90%;
+    }
+    .subinfo{
+        width: 90%;
+        font-size: calc(0.5em + 0.5vw) !important;
+    }
+    .textoinfo{
+        font-size: calc(0.5em + 0.5vw) !important;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1440px) {
+    /* Tarjetas */
+    .tarjeta{
+        width: 22%;
+    }
+    .tarj-tit{
+        font-size: calc(0.05em + 1vw);
+    }
+    .tarj-aut{
+        font-size: calc(0.005em + 0.8vw);
+    }
+    .tarj-pre{
+        font-size: calc(0.05em + 0.8vw);
+    }
+    /* Pag cursos */
+    #cursowrap{
+        width: 75%;
+    }
+    #resumencurso{
+        width: 90%;
+        font-size: calc(0.4em + 0.4vw);
+    }
+    .tituloresumen{
+        font-weight: 600;
+        font-size: calc(0.5em + 0.5vw) !important;
+    }
+    #imagencurso{
+        width: 90%;
+    }
+    #preciocurso{
+        width: 80%;
+    }
+    .btn-compra{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .contenido{
+        width: 80%;
+    }
+    .subinfo{
+        width: 80%;
+    }
+}
+
+.img-carrousel{
+    display: block;
+    z-index: -1;
+    position: absolute;
+
+}
+
+/* INICIO */

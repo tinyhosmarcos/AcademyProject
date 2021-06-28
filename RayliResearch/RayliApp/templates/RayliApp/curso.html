@@ -1,0 +1,167 @@
+{% extends "RayliApp/inicio.html" %}
+{%load static%}
+{% block title %}
+    {{curso.nombre}}
+{% endblock title %}
+{% block body %}
+<body>
+    <div id="cursowrap">
+        <div id="compracurso">
+            <div id="imagencurso" style="background-image: url({%static 'RayliApp/images/cursos/desarrollo.png'%});"></div>
+            <div id="preciocurso" class="red-text text-accent-2">$19.90</div>
+            <a class="waves-effect red btn-large modal-trigger btn-compra" href="#modal1">Inscribirme</a>
+            <div id="resumencurso">
+                <div class="tituloresumen">Nuestro curso incluye:</div>
+                <div class="row">
+                    <div class="col s1">
+                        <i class="material-icons valign-wrapper">slideshow</i>
+                      </div>
+                      <div class="col s11">
+                        <h6 class="valign-wrapper">20 horas de clases en vivo</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <i class="material-icons valign-wrapper">cloud_download</i>
+                      </div>
+                      <div class="col s11">
+                        <h6 class="valign-wrapper">Recursos descargables</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <i class="material-icons valign-wrapper">help</i>
+                      </div>
+                      <div class="col s11">
+                        <h6 class="valign-wrapper">Asistencia permanente</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <i class="material-icons valign-wrapper">devices</i>
+                      </div>
+                      <div class="col s11">
+                        <h6 class="valign-wrapper">Acceso en móvil</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <i class="material-icons valign-wrapper">receipt</i>
+                      </div>
+                      <div class="col s11">
+                        <h6 class="valign-wrapper">Certificado</h6>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="infocurso">
+            <div id="tituloinfo">Programación y diseño web</div>
+            <p class="subinfo">Vivimos en la era digital, por lo que una competencia en programación y diseño web, potenciará considerablemente tu Currículum Vitae.</p>
+            <div id="aprenderas">
+                <div class="subtitulos">¿Que Aprenderás?</div>
+                <div class="row">
+                    <div class="col s1 offset-s1">
+                        <i class="material-icons valign-wrapper black-text right cyan-text text-darken-2">check</i>
+                      </div>
+                      <div class="col s10">
+                        <h6 class="valign-wrapper black-text">Aprenderás los fundamentos básicos de la programación</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1 offset-s1">
+                        <i class="material-icons valign-wrapper black-text right cyan-text text-darken-2">check</i>
+                      </div>
+                      <div class="col s10">
+                        <h6 class="valign-wrapper black-text">Conocerás las principales tecnologías utlizadas hoy en día</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1 offset-s1">
+                        <i class="material-icons valign-wrapper black-text right cyan-text text-darken-2">check</i>
+                      </div>
+                      <div class="col s10">
+                        <h6 class="valign-wrapper black-text">Aplicarás tus conocimientos en la creación de una página web personal</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1 offset-s1">
+                        <i class="material-icons valign-wrapper black-text right cyan-text text-darken-2">check</i>
+                      </div>
+                      <div class="col s10">
+                        <h6 class="valign-wrapper black-text">Comprenderás los principios básicos del diseño web</h6>
+                      </div>
+                </div>
+                <div class="row">
+                    <div class="col s1 offset-s1">
+                        <i class="material-icons valign-wrapper black-text right cyan-text text-darken-2">check</i>
+                      </div>
+                      <div class="col s10">
+                        <h6 class="valign-wrapper black-text">Aprenderás a utilizar el lenguaje de programación JavaScript</h6>
+                      </div>
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="subtitulos">Descripción</div>
+                <h6 class="textoinfo">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at arcu tortor. Maecenas dictum tellus ipsum. Ut gravida ante non arcu finibus, ac consectetur dolor ullamcorper. Aliquam sollicitudin velit nunc, at tincidunt quam consequat a. Maecenas interdum euismod mauris. Proin eget sem tellus. Etiam et sem pulvinar, lobortis nunc nec, ornare mi. Aenean vitae nulla erat. Vestibulum quis dui eu arcu facilisis auctor a ac tortor.
+                </h6>
+            </div>
+            <div class="contenido">
+                <div class="subtitulos">Contenido del curso</div>
+                <h6 class="textoinfo">
+                    Puedes descargar el contenido detallado del curso a continuación
+                </h6>
+                <a class="waves-effect cyan darken-2 btn-large btn-descarga"><i class="material-icons left">file_download</i>Descargar PDF</a>
+            </div>
+        </div>
+
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content black-text">
+          <h4>Instrucciones de pago:</h4>
+          <p>Depositar el monto de $19.99 por cualquiera de los siguientes métodos</p>
+          <ul>
+              <li>Depósito a cuenta BCP: 123456789123</li>
+              <li>Yape o Plin al 984123456</li>
+          </ul>
+          <p class="textomodal">Luego de realizar el depósito subir una foto o captura del recibo en el formulario a continuación</p>
+          <div class="separador separadormodal"></div>
+          <div class="row">
+            <form class="col s12" id="formulariopago">
+              <div class="row">
+                <div class="file-field input-field col s8">
+                    <div class="btn">
+                      <span>File</span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" required>
+                    </div>
+                  </div>
+                <div class="input-field col s4">
+                    <button class="btn-large waves-effect red envio-pago" type="submit" name="action">Enviar
+                        <i class="material-icons right">send</i>
+                      </button>
+                </div>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+        </div>
+      </div>
+      <!-- Modal Structure -->
+  <div id="modal2" class="modal">
+    <div class="modal-content red-text">
+      <h4>Envío exitoso</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
+</body>
+
+{% endblock body %}
